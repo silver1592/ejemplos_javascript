@@ -1,0 +1,17 @@
+body{
+    background-color: gray;
+}
+
+.caja{
+    background-color: lightblue;
+    border:1px black solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+}
+
+#contenedor
+{
+    padding: 20px;
+    width: 600px;
+}
