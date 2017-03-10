@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-3.1.1.min.js"></script>
+    <style>
+        canvas{
+            background-color: #def;
+            border: 1px solid #aaa;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="480" height="320"></canvas>
+    <script>
+        var mousePrecionado=false;
+        $(function(){
+            var dibujo = $('canvas')[0]
+            var contexto = dibujo.getContext("2d");
+            
+            $('canvas').mousemove(function(e)
+            {
+                var x = e.pageX-dibujo.offsetLeft;
+                var y = e.pageY-dibujo.offsetTop;
+
+                if(mousePrecionado){
+                    contexto.lineTo(x,y)
+                    contexto.stroke();
+                }
+                else
+                {
+                    contexto.moveTo(x,y)
+                }
+            })
+
+            $("canvas").mousedown(function(){
+                mousePrecionado=true;
+            })
+            $("canvas").mouseup(function(){
+                mousePrecionado=false;
+            })
+        })
+    </script>
+</body>
+</html>

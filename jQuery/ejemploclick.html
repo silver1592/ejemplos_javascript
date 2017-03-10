@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-3.1.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button class="b">B1</button>
+    <button class="b">B2</button>
+    <button class="b">B3</button>
+
+    <p class="color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero perferendis nisi quos iusto aliquid ipsum aperiam possimus ipsa nihil nobis. Nesciunt excepturi, debitis labore quaerat ipsum. Suscipit nisi, voluptatum accusantium!</p>
+    <p class="color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis quas atque sit, voluptates sed voluptatibus, minus? Consequuntur ullam laboriosam mollitia, necessitatibus ipsum illum! Nemo a saepe sint delectus dicta?</p>
+    <p class="color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur velit quae laudantium inventore. Facilis, deleniti minus aliquid enim explicabo nemo tempore, maiores pariatur sequi quasi nostrum sint exercitationem corrupti necessitatibus!</p>
+    <div id="return"> Return </div>
+
+    <script>
+        $(function(){
+            $(".b").click(function(){
+                $(this).slideUp();
+            })
+
+            $(".b").dblclick(function(){
+                $(this).hide();
+            })
+            $("#return").click(function(){
+                $(".b").show();
+            })
+            $(".color").mouseenter(function(){
+                $(this).css('color','blue');
+            })
+
+            $(".color").mouseleave(function(){
+                $(this).css('color','black');
+            })
+        })
+    </script>
+</body>
+</html>
