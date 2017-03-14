@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-3.1.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        .caja{
+            background-color: green;
+            width: 640px;
+            height: 480px;
+        }
+        .pelota{
+            background-color: orange;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .caja, .pelota{
+            border:black solid 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de efectos en jQuery</h1>
+    <h2>Ocultar y mostrar</h2>
+    <button id="btn-ocultar">Ocultar</button>
+    <button id="btn-mostrar">Mostrar</button>
+    <button id="btn-alternar">Alternar</button>
+
+    <p id="parrafo1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto placeat tempore mollitia aliquam aut consequuntur dolorum, laudantium magni inventore eligendi earum molestiae error asperiores nihil repudiandae illo at fuga. Nulla.</p>
+    
+    <h2>Fundido Gradual</h2>
+    <button id="btn-fadeOut">fadeOut</button>
+    <button id="btn-fadeIn">fadeIn</button>
+    <button id="btn-fadeToggle">fadeToggle</button>
+    <button id="btn-fadeTo">fadeTo</button>
+
+    <p id="parrafo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto placeat tempore mollitia aliquam aut consequuntur dolorum, laudantium magni inventore eligendi earum molestiae error asperiores nihil repudiandae illo at fuga. Nulla.</p>
+
+    <h2>Deslizamiento</h2>
+    <button id="btn-slideUp">slideUp</button>
+    <button id="btn-slideDown">slideDown</button>
+    <button id="btn-slideToggle">slideToggle</button>
+
+    <p id="parrafo3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto placeat tempore mollitia aliquam aut consequuntur dolorum, laudantium magni inventore eligendi earum molestiae error asperiores nihil repudiandae illo at fuga. Nulla.</p>
+    
+    <div class="caja">
+        <div class="pelota">
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            //hide
+            $("#btn-ocultar").click(function(){
+                $("#parrafo1").hide('slow','linear');
+            })
+            $("#btn-mostrar").click(function(){
+                $("#parrafo1").show("fast",'linear');
+            })
+            $("#btn-alternar").click(function(){
+                $("#parrafo1").toggle('slow');
+            })
+
+            //Fade
+            $("#btn-fadeOut").click(function(){
+                //$("#parrafo1").hide('slow','linear');
+                $("#parrafo2").fadeOut();
+            })
+            $("#btn-fadeIn").click(function(){
+                //$("#parrafo1").show("fast",'linear');
+                $("#parrafo2").fadeIn();
+            })
+            $("#btn-fadeToggle").click(function(){
+                //$("#parrafo1").toggle('slow');
+                $("#parrafo2").fadeToggle();
+            })
+            $("#btn-fadeTo").click(function(){
+                //$("#parrafo1").toggle('slow');
+                $("#parrafo2").fadeTo('slow',0.5);
+            })
+
+            //Slides
+            $("#btn-slideUp").click(function(){
+                $("#parrafo3").slideUp('slow','linear');
+            })
+            $("#btn-slideDown").click(function(){
+                $("#parrafo3").slideDown("fast",'linear');
+            })
+            $("#btn-slideToggle").click(function(){
+                $("#parrafo3").slideToggle('slow');
+            })
+
+            //Animate
+            $(".pelota").click(function(){
+                if($(this).css("width")!='200px')
+                {
+                    //$(this).animate({width: '200px',height: '200px'},'slow')
+                    $(this).animate({left:'100px'},'slow',"swing")
+                }
+                else
+                {
+                    //$(this).animate({ width: '50px', height: '50px'},'slow')
+                    $(this).animate({ right:'100px' },'slow',"swing")
+                }
+            })
+        })
+    </script>
+</body>
+</html>
