@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="./jquery-ui/jquery-ui.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./jquery-ui/jquery-ui.css">
+    <style>
+        #tabs{
+            width:500px;
+            overflow: scroll;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de efectos en jQuery</h1>
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Acordeon</a></li>
+            <li><a href="#tabs-2">Proin dolor</a></li>
+            <li><a href="#tabs-3">Aenean lacinia</a></li>
+        </ul>
+        <div id="tabs-1">
+            <div id="acordeon">
+                <h2>Ocultar y mostrar</h2>
+                <div>
+                    <p id="parrafo1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto placeat tempore mollitia aliquam aut consequuntur dolorum, laudantium magni inventore eligendi earum molestiae error asperiores nihil repudiandae illo at fuga. Nulla.</p>
+                </div>
+                <h2>Fundido Gradual</h2>
+                <div>
+                    <p id="parrafo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto placeat tempore mollitia aliquam aut consequuntur dolorum, laudantium magni inventore eligendi earum molestiae error asperiores nihil repudiandae illo at fuga. Nulla.</p>
+                </div>
+                <h2>Deslizamiento</h2>
+                <div>
+                    <p id="parrafo3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto placeat tempore mollitia aliquam aut consequuntur dolorum, laudantium magni inventore eligendi earum molestiae error asperiores nihil repudiandae illo at fuga. Nulla.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="tabs-2">
+            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+        </div>
+        <div id="tabs-3">
+            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+            <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            $("#acordeon").accordion();
+            $("#tabs").tabs();
+            $("#tabs").draggable();
+            $("#tabs").resizable();
+            
+        })
+    </script>
+</body>
+</html>
